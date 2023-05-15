@@ -1,0 +1,33 @@
+<h1>Event list</h1>
+<nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixButton">
+  <input type="text" [(ngModel)]="queryParams.q" nz-input placeholder="input search text" />
+</nz-input-group>
+<ng-template #suffixButton>
+  <button nz-button nzType="primary" (click)="search()" nzSize="large" nzSearch>Search</button>
+</ng-template>
+
+<nz-table #basicTable [nzData]="dataList"
+          [nzFrontPagination]="false">
+  <thead>
+  <tr>
+    <th>Event name</th>
+    <th>Place</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of basicTable.data">
+    <td>{{data.name}}</td>
+    <td>{{data.place}}</td>
+    <td>
+      <a>Edit</a>
+    </td>
+  </tr>
+  </tbody>
+</nz-table>
+<nz-pagination *ngIf="totalElements" [nzPageIndex]="queryParams.page"
+               [nzTotal]="totalElements"
+               [nzPageSize]="queryParams.size"
+               (nzPageIndexChange)="pageChange($event)"
+>
+</nz-pagination>
