@@ -17,6 +17,7 @@ import {NzMessageModule} from 'ng-zorro-antd/message';
 import {NzSpaceModule} from 'ng-zorro-antd/space';
 import {NzSelectModule} from 'ng-zorro-antd/select';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
+import {NzCheckboxModule} from "ng-zorro-antd/checkbox";
 
 const SHARED_MODULE: any[] = [
   CommonModule,
@@ -37,7 +38,8 @@ const SHARED_MODULE: any[] = [
   NzMessageModule,
   NzSpaceModule,
   NzSelectModule,
-  NzSpinModule
+  NzSpinModule,
+  NzCheckboxModule
 ]
 
 @NgModule({

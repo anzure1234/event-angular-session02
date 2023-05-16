@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {EventService} from "../service/event.service";
-import {QueryParamsListing} from "../model/query-params-listing";
-import {DEFAULT_ACTIVE_PAGE, DEFAULT_PAGE_SIZE} from "../common/const";
+
 import {ActivatedRoute, Router} from "@angular/router";
+import {QueryParamsListing} from "../../model/query-params-listing";
+import {DEFAULT_ACTIVE_PAGE, DEFAULT_PAGE_SIZE} from "../../common/const";
+import {EventService} from "../../service/event.service";
 
 @Component({
   selector: 'app-events',
